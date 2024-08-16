@@ -8,7 +8,7 @@
 const express = require('express');
 
 // Constants
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
 
 // App
@@ -18,5 +18,5 @@ app.get('/', (req, res) => {
 });
 
 //app.listen(PORT, HOST);
-app.listen(process.env.port);
+app.listen(PORT);
 console.log(`Running on http://${HOST}:${PORT}`);
