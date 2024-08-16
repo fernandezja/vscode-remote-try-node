@@ -17,5 +17,6 @@ app.get('/', (req, res) => {
 	res.send('Hello remote world!\n');
 });
 
-app.listen(PORT, HOST);
+//app.listen(PORT, HOST);
+app.listen(process.env.port);
 console.log(`Running on http://${HOST}:${PORT}`);
